@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TestContainer from '../Containers/TestContainer.js'
+import TestContainer from '../Containers/TestContainer'
 
 class TestPage extends Component {
   render() {
