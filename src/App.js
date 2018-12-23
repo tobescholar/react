@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Test from './Pages/TestPage.js'
+import Test from '@/Pages/TestPage.js'
 
 import { Provider } from 'react-redux';
 import configureStore from './Modals/Store';

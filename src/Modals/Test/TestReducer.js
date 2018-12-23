@@ -1,9 +1,18 @@
-export function TestReducer(state = {}, {payload, type}) {
+import * as types from './TestVariable'
+
+export function TestReducer(state = {}, { payload = {}, type }) {
   switch (type) {
-    case 'TEST_MODULE_TEST':
+    // 更新
+    case types.TEST_MODULE_PUT:
       return {
         ...state,
-        text: 'test text',
+        ...payload,
+      }
+    // 测试
+    case types.TEST_MODULE_TEST:
+      return {
+        ...state,
+        text: payload,
       }
     default:
       return state;
