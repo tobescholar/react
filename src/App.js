@@ -14,6 +14,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <header className="App-header">
+            a
             <img src={logo} className="App-logo" alt="logo" />
           </header>
           <Test />
