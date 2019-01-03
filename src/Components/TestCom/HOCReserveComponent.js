@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 // 高阶组件之反向继承
 
 const MyContainer = (WrappedComponent) => class extends WrappedComponent {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = Object.assign({}, this.state,{
+  //       child: 'child'
+  //   })
+  // }
   state = {
     child: 'child'
   }
+  
   childFn() {
     return 'This is childFn String!';
   }
@@ -32,6 +39,7 @@ class HOCReserveComponent extends Component {
   }
   render() {
     const interim = this.props;
+    console.log(this)
     return (
       <div>
         This is HOCProxyComponent!

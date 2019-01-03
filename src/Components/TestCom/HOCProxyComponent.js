@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 const MyContainer = (WrappedComponent) => class extends Component {
   proc(wrappedComponentInstance) {
     // wrappedComponentInstance.method();
+    console.log(wrappedComponentInstance)
   }
   render() {
     const newProps = {
@@ -11,7 +12,7 @@ const MyContainer = (WrappedComponent) => class extends Component {
     }
     const props = Object.assign({}, this.props, {
       ref: this.proc.bind(this)
-    })
+    });
     return (
       <WrappedComponent {...newProps} {...props} />
     )
@@ -21,6 +22,7 @@ const MyContainer = (WrappedComponent) => class extends Component {
 class HOCProxyComponent extends Component {
   render() {
     const interim = this.props;
+    console.log(interim)
     return (
       <div>
         This is HOCProxyComponent!

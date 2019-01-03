@@ -71,6 +71,7 @@ class CommunicateComponent extends Component {
 
   handleItemChange(e) {
     console.log(e);
+    console.log(this.props)
   }
 
   render() {

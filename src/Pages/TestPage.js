@@ -9,10 +9,6 @@ const mapStateToProps = (state, ownProps) => ({
   own: ownProps
 })
 
-function testable(target) {
-  target.isTestable = true;
-}
-
 @connect(mapStateToProps)
 class TestPage extends Component {
   componentDidMount() {
