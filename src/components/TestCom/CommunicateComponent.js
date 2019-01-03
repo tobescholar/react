@@ -9,7 +9,7 @@ class ListItem extends Component {
     return (
       <li>
         <input type="checkbox" checked={this.props.checked} onChange={this.props.onChange} />
-        <span>{ this.props.text }</span>
+        <span style={{ color: 'white' }}>{ this.props.value }</span>
       </li>
     )
   }
@@ -78,7 +78,7 @@ class CommunicateComponent extends Component {
       <div>
         This is CommunicateComponent!
         <List
-          list={[{text: 1, checked: true}, {text: 2, checked: true}]}
+          list={this.props.list}
           handleItemChange={this.handleItemChange}
         />
       </div>
